@@ -27,3 +27,15 @@ export const configuracion = {
     steps: 0
   }
 }
+
+export const TimerStates = {
+  stopped: "stopeed",
+  started: "started"
+}
+
+export const TimerConfig = {
+  timerStatus: TimerStates.stopped,
+  timerVal: "0",
+  stepsLeft: "0",
+  currentActivity: "Preparado?",
+}

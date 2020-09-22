@@ -25,11 +25,15 @@ export default class ConfigurationScreen extends React.Component {
             this.setState({ userConfig: userConfig })
           }
         } catch (err) {
+          console.log("error=", error)
           await AsyncStorage.setItem("userConfig", JSON.stringify(configuracion));
           this.setState({ userConfig: configuracion });
         }
 
 
+      } else {
+        await AsyncStorage.setItem("userConfig", JSON.stringify(configuracion));
+        this.setState({ userConfig: configuracion });
       }
     } catch (err) {
       console.log(err);
